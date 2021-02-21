@@ -9,23 +9,22 @@ public  class EmpWageUC1 {
 				int daily_wage=0;
 
 				//computation
-			int  empCheck= (int) Math.floor(Math.random()*10)%3;
-				if (empCheck==IS_FULL_TIME) 
+			int   empCheck= (int) Math.floor(Math.random()*10)%3;
+				switch (empCheck) 
 					{
 						
-					emp_hrs=8;
-
-					}
-					else if (empCheck==IS_PART_TIME)
-					{
+					case 1: emp_hrs=8;
+					
+					
+					case 2:
+					
 						emp_hrs=4;
-					}
-					else
-					{	
+					
+					case 3: 
 						emp_hrs=4;
-					}
-				
-						daily_wage=emp_hrs*WAGE_PER_HOUR;
-					System.out.println("Employee wage" +daily_wage);
+					
+				default:daily_wage=emp_hrs*WAGE_PER_HOUR;
+					     System.out.println("Employee wage" +daily_wage);
 		}
+	}
 }
