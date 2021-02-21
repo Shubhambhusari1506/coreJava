@@ -5,12 +5,14 @@ public  class EmpWageUC1 {
 			int  IS_FULL_TIME=1;
 			int IS_PART_TIME=2;
 			int DAYS_IN_MONTH=20;
+			int MAX_HOUR=100;
 				//Variables 
 				int emp_hrs=0;
 				int monthly_wage=0;
 				int days=0;
+				int hours=0;
 				//computation
-				while (days !=DAYS_IN_MONTH){
+				while (days !=DAYS_IN_MONTH && hours != MAX_HOUR){
 			int   empCheck= (int) Math.floor(Math.random()*10)%3;
 				if  (empCheck==IS_FULL_TIME)
 						{
@@ -25,6 +27,7 @@ public  class EmpWageUC1 {
 							{
 								emp_hrs=0;
 							}
+						hours= hours+emp_hrs;
 					days=days +1;
 					monthly_wage=monthly_wage+emp_hrs*WAGE_PER_HOUR;
 					}
