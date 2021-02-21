@@ -2,17 +2,17 @@ public  class EmpWageUC1 {
 		public static void main(String[] args) {
 			//constant
 			
-			int EMP_RATE_PER_HR=20;
-			int WORK_HR_IN_DAY=8;
+			int  IS_FULL_TIME=1;
 
 				//computation
-			int  empCheck= EMP_RATE_PER_HR*WORK_HR_IN_DAY;
-			
-				
+			int  empCheck= (int) Math.floor(Math.random()*10)%2;
+				if (empCheck==IS_FULL_TIME) {
+						
+					System.out.println("Employee is present");
 
-					
-				
-					System.out.println("Employee is present and daily wage is " +empCheck);
-				
+				}
+					else {
+					System.out.println("Employee is absent");
+				}
 		}
 }
