@@ -8,7 +8,8 @@ public class LinecomparisonUC1
 	
              	 int x1,x2,y1,y2;
  
-	         double distance;
+	         Double   lengthOne;
+				Double  lengthTwo;
 	
 	         Scanner s= new Scanner(System.in);
  
@@ -28,10 +29,15 @@ public class LinecomparisonUC1
 	   
                  y2=s.nextInt();
 	  	    
-		 distance=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+		 lengthOne =Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+		lengthTwo=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
  	 	    	 	    
-  	         System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+distance);
+  	         System.out.println("length is " +lengthOne);
+				System.out.println("length is " +lengthTwo);
  
+
+			System.out.println(lengthOne.equals(lengthTwo));
+			
 	}
  
 }
