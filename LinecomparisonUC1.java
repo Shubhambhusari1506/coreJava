@@ -36,7 +36,7 @@ public class LinecomparisonUC1
 				System.out.println("length is " +lengthTwo);
  
 
-			System.out.println(lengthOne.equals(lengthTwo));
+			System.out.println(lengthOne.compareTo(lengthTwo));
 			
 	}
  
