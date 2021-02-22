@@ -12,11 +12,9 @@ public class snakeladderUC1 {
                int starting_pos=0;
 
 
-              char player1;
+              int Diceroll = (int) (Math.random() *10) % 6;
 
-            System.out.println("welcome to snake and ladder game");
-            
-            System.out.println("Player Position======>" +starting_pos);
+            System.out.println("number comes on dice after rolling~~" +Diceroll);
 
    		}
 
