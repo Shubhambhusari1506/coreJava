@@ -6,7 +6,8 @@ public class snakeladderUC1 {
 		public  static final int start_pos = 0;
 		public static final int ladder = 0;
 		public static final int snake = 1;
-
+		public static final int  end_pos = 100;
+		
 
 
       public static void main (String [] args)
@@ -21,10 +22,13 @@ public class snakeladderUC1 {
 					
 				//computation
 
-				int rollDice;
+				while (currentposition != end_pos && currentposition < end_pos)
+				{
+             	int rollDice;
+					rollDice = (int) Math.floor(Math.random() * 10) % 6 + 1;
+					
 
-               rollDice =  (int) Math.floor(Math.random() * 10 ) % 6 + 1;
-					System.out.println("dice number:   " +rollDice);
+					
 					currentposition += rollDice;
 
 
@@ -39,11 +43,17 @@ public class snakeladderUC1 {
 
 						case snake:
 						rollDice = (int) Math.floor(Math.random() * 10) % 6 + 1;
-                  currentposition += rollDice;
+						if  (currentposition < rollDice) {
+			 
+						currentposition = start_pos;
+						}
+						else {
+						currentposition -= rollDice;
+						}
                   break;
 
 						default:
-		    			//no play
+		    	//no play
 						currentposition += 0;
 						}
 
@@ -52,7 +62,7 @@ public class snakeladderUC1 {
 
               
    		}
-
+   }
 }
 
 
